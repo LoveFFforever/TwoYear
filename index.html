@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<a href="https://loveffforever.github.io/" target="_blank">这是我们的一周年</a>
+<a href="ttps://loveffforever.github.io/Brthday/" target="_blank">宝贝去年生日</a>
+<a href="https://loveffforever.github.io/Yanhua/" target="_blank">元旦烟花在这里哦</a>
+
+
+<head>
+    <title>亲爱的，两年啦！</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+	<style>
+	img#logo {
+            width: 128px;
+            background-size: cover;
+            border-radius: 200px;
+            box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
+            border: 3px solid #00a0ff;
+            opacity: 1;
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            transition: all 1.0s;
+        }
+        #logo:hover {
+            box-shadow: 0 0 10px #fff;
+            -webkit-box-shadow: 0 0 19px #fff;
+            transform: rotate(360deg);
+            -ms-transform: rotate(360deg); /* IE 9 */
+            -moz-transform: rotate(360deg); /* Firefox */
+            -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
+            -o-transform: rotate(360deg); /* Opera */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+        .cs {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+        }
+	</style>
+    <link href="css/default1.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">								
+                <span class="comments">亲爱的</span>
+                <br />
+                <span class="comments">还记得这个网站吗</span>
+                <br />
+                <span class="comments">你应该已经见过两次啦</span>
+                <br />
+                <span class="comments">不过估计你不记得</span>
+                <br />
+                <span class="comments">哈哈，我可记着呢</span>
+                <br />
+                <span class="comments">当时给你感动的热泪盈眶，哈哈</span>
+                <br />
+                <span class="comments">时间真的好快</span>
+                <br />
+                <span class="comments">转眼间我们一起在一起两年啦</span>
+                <br />
+                <span class="comments">七百多天，七百多个昼夜</span>
+                <br />
+                <span class="comments">之前得好多事情，现在还记得很清楚</span>
+                <br />
+                <span class="comments">我们从学校走到了社会</span>
+                <br />
+                <span class="comments">谈婚论嫁，嘻嘻，好像也指日可待</span>
+                <br />
+                <span class="comments">爱你的心，始终未变</span>
+                <br />
+                <span class="comments">两周年纪念日</span>
+                <br />
+                <span class="comments">那当然不能只是改个文字的啦</span>
+                <br />
+                <span class="comments">宝宝去看左上角</span>
+                <br />
+                <span class="comments">更多的话，</span>
+                <br />
+                <span class="comments">在那里哦，有你没见过的</span>
+                <br />
+                <span class="comments">还是那句话</span>
+                <br />
+                <span class="comments">你是唯一，你是偏爱，你是无与伦比的美丽</span>
+                <br />
+                <span class="comments">这辈子</span>
+                <br />
+                <span class="comments">遇上你</span>
+                <br />
+                <span class="comments">是我最大的幸运</span>
+                <br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        宝宝，这已经是我们在一起的第
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Happy Everyday!
+                        <br  /> Love you forever and ever.
+                        <div class="signature">- Su su</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</script>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+		<!--
+        var together = new Date();
+        together.setFullYear(2020, 1, 15);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+		-->
+		together=new Date("01/15/2020 00:00:00");
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 5000);
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+</html>
